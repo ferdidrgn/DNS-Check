@@ -1,0 +1,4 @@
+Remove-NetQosPolicy -Name "Upload" -ErrorAction SilentlyContinue
+New-NetQosPolicy -Name "Upload" -ThrottleRateActionBitsPerSecond 20MB
+New-NetQosPolicy -Name "LowLatency" -IPProtocolMatchCondition UDP -PriorityValue8021Action 6
+Get-NetQosPolicy | Format-Table Name, ThrottleRateActionBitsPerSecond, IPProtocolMatchCondition, PriorityValue8021Action
