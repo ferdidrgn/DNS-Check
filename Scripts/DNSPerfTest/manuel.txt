@@ -1,0 +1,2 @@
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+cd C:\Scripts\DNSPerfTest.\dns_benchmark.ps1
